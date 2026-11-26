@@ -112,6 +112,6 @@ rag-analise-mercado-franchising/
 ---
 
 <p align="center">
-  Feito por <a href="https://github.com/SEU_USUARIO">Pedro Davi</a> ·
-  <a href="https://linkedin.com/in/SEU_PERFIL">LinkedIn</a>
+  Feito por <a href="https://github.com/pedro-dav1/pedro-dav1-pedro-dav1">Pedro Davi</a> ·
+  <a href="https://www.linkedin.com/in/pedro-davi-silva/">LinkedIn</a>
 </p>
