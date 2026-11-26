@@ -1,0 +1,10 @@
+# Banco vetorial gerado pelo notebook
+chroma_abf_franchising/
+
+# Documentos de terceiros
+*.pdf
+
+# Segredos e ambiente
+.env
+__pycache__/
+.ipynb_checkpoints/
