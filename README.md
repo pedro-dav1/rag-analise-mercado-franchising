@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://colab.research.google.com/github/SEU_USUARIO/rag-analise-mercado-franchising/blob/main/pipeline_rag_analise_mercado.ipynb">
+  <a href="https://colab.research.google.com/drive/1Jqc5HiXg6KWnrNPkkiEyo22P1iw8xUvy?usp=sharing">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Abrir no Colab"/>
   </a>
 </p>
@@ -74,7 +74,7 @@ resposta = qa_chain.invoke({"query": "Qual segmento teve maior crescimento e de 
 
 print(resposta["result"])
 for doc in resposta["source_documents"]:
-    print("Página:", doc.metadata.get("page"))
+    print("Página:", doc.metadata.get("page") + 1)  # PyPDF numera páginas a partir de 0
 ```
 
 <p align="center">
@@ -86,7 +86,9 @@ for doc in resposta["source_documents"]:
 1. Abra o notebook no Colab pelo botão acima.
 2. Crie uma chave gratuita em [console.groq.com](https://console.groq.com) e salve nos **Secrets** do Colab (ícone de chave) com o nome `GROQ_API_KEY`.
 3. Faça upload do PDF do relatório para `/content/` e ajuste a variável `CAMINHO_PDF`, se o nome for diferente.
-4. Execute as células em ordem.
+4. Execute as células em ordem, começando pela instalação.
+
+> Se aparecer erro de versão ao importar as bibliotecas, use **Ambiente de execução → Desconectar e excluir ambiente de execução** e rode tudo de novo do início. Isso acontece quando o Colab mantém versões antigas carregadas na memória.
 
 > O relatório usado é a pesquisa trimestral de desempenho do franchising da ABF (Associação Brasileira de Franchising). Ele não está no repositório por ser material de terceiros; está disponível no site da ABF.
 
@@ -95,7 +97,7 @@ for doc in resposta["source_documents"]:
 ```
 rag-analise-mercado-franchising/
 ├── pipeline_rag_analise_mercado.ipynb   # pipeline completo, documentado passo a passo
-├── requirements.txt                     # versões fixadas
+├── requirements.txt                     # dependências
 ├── img/                                 # prints usados no README
 └── README.md
 ```
