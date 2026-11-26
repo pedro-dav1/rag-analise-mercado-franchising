@@ -74,7 +74,7 @@ resposta = qa_chain.invoke({"query": "Qual segmento teve maior crescimento e de 
 
 print(resposta["result"])
 for doc in resposta["source_documents"]:
-    print("Página:", doc.metadata.get("page") + 1)  # PyPDF numera páginas a partir de 0
+    print("Página:", doc.metadata.get("page") + 1)
 ```
 
 <p align="center">
